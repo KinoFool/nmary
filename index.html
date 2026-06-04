@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NMARY</title>
+  <meta name="description" content="Administrateur système et réseau, j'interviens auprès des PME en Savoie pour mettre en place et fiabiliser leur infrastructure informatique.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Syne:wght@500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F5F3EC;
+      --text: #1A1A10;
+      --muted: #5C5840;
+      --faint: #9A9478;
+      --accent: #EA580C;
+      --olive: #8A9E5A;
+      --border: #DDD9CC;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 0 1.5rem 5rem;
+    }
+
+    .page { max-width: 620px; width: 100%; }
+
+    .header {
+      padding: 2.5rem 0 1.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mono-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--faint);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 1.25rem;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 7px;
+      height: 12px;
+      background: var(--accent);
+      animation: blink 1.2s step-end infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: .85rem;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 460px;
+    }
+
+    .content { padding-top: 0; }
+
+    .section { margin-top: 2.5rem; }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--faint);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-label::before {
+      content: '>';
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .sc {
+      background: transparent;
+      padding: 1.15rem 1.2rem;
+      transition: background .15s;
+    }
+
+    .sc:hover { background: rgba(138, 158, 90, .06); }
+
+    .sc:nth-child(1) { clip-path: polygon(14px 0, 100% 0, 100% 100%, 0 100%, 0 14px); outline: 1.5px solid var(--olive); }
+    .sc:nth-child(2) { clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%); outline: 1.5px solid var(--olive); }
+    .sc:nth-child(3) { clip-path: polygon(0 0, 100% 0, 100% 100%, 14px 100%, 0 calc(100% - 14px)); outline: 1.5px solid var(--olive); }
+    .sc:nth-child(4) { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); outline: 1.5px solid var(--olive); }
+
+    .sc-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: .4rem;
+    }
+
+    .sc-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .sc-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+    }
+
+    .sc-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .about-text {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .contact {
+      margin-top: 2.5rem;
+      background: transparent;
+      outline: 1.5px solid var(--olive);
+      padding: 1.5rem 2rem;
+      cursor: pointer;
+      transition: background .15s;
+      clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .6rem;
+      border: none;
+      width: 100%;
+    }
+
+    .contact:hover { background: rgba(138, 158, 90, .06); }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-row i {
+      font-size: 20px;
+      color: var(--accent);
+    }
+
+    .contact-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .contact-email {
+      font-family: 'DM Mono', monospace;
+      font-size: 15px;
+      color: var(--muted);
+      border-bottom: 1px dashed var(--olive);
+      padding-bottom: 1px;
+      transition: color .15s;
+    }
+
+    .contact:hover .contact-email { color: var(--text); }
+
+    .copied {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--olive);
+      opacity: 0;
+      transition: opacity .3s;
+      height: 14px;
+    }
+
+    .copied.show { opacity: 1; }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      20% { transform: rotate(-12deg); }
+      40% { transform: rotate(10deg); }
+      60% { transform: rotate(-8deg); }
+      80% { transform: rotate(6deg); }
+    }
+
+    .contact:hover .mail-icon { animation: wiggle .5s ease; }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 22px; }
+      .services { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="mono-tag">~/nmary.net <span class="cursor"></span></div>
+      <h1>Système, réseau<br><em>et cybersécurité</em><br>en Savoie</h1>
+      <p class="tagline">J'interviens auprès des PME pour mettre en place et fiabiliser leur infrastructure informatique — sur site, en Savoie.</p>
+    </div>
+
+    <div class="content">
+      <div class="section">
+        <div class="section-label">Prestations</div>
+        <div class="services">
+          <div class="sc">
+            <div class="sc-head"><span class="sc-name">Réseau</span><span class="sc-num">01</span></div>
+            <div class="sc-desc">Configuration, installation physique, firewall, VLANs, WiFi</div>
+          </div>
+          <div class="sc">
+            <div class="sc-head"><span class="sc-name">Serveurs</span><span class="sc-num">02</span></div>
+            <div class="sc-desc">Installation et administration de serveurs Linux</div>
+          </div>
+          <div class="sc">
+            <div class="sc-head"><span class="sc-name">Cybersécurité</span><span class="sc-num">03</span></div>
+            <div class="sc-desc">Durcissement, gestion des accès, bonnes pratiques</div>
+          </div>
+          <div class="sc">
+            <div class="sc-head"><span class="sc-name">Autre besoin ?</span><span class="sc-num">--</span></div>
+            <div class="sc-desc">N'hésitez pas à en discuter</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Mon parcours</div>
+        <p class="about-text">Diplômé Epitech en ingénierie système et réseau, spécialisation cybersécurité. Plusieurs années sur des infrastructures complexes à Paris, rentré en Savoie. Je privilégie les solutions open source, simples et pérennes.</p>
+      </div>
+
+      <div class="section">
+        <button class="contact" onclick="copyEmail()">
+          <div class="contact-row">
+            <i class="ti ti-mail mail-icon" aria-hidden="true"></i>
+            <span class="contact-label">Parlons-en</span>
+          </div>
+          <span class="contact-email">nicolas@nmary.net</span>
+          <div class="copied" id="copiedMsg">✓ Adresse copiée</div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyEmail() {
+      navigator.clipboard.writeText('nicolas@nmary.net').then(() => {
+        const msg = document.getElementById('copiedMsg');
+        msg.classList.add('show');
+        setTimeout(() => msg.classList.remove('show'), 2000);
+      });
+    }
+  </script>
+</body>
+</html>
