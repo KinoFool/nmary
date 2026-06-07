@@ -7,7 +7,7 @@
   <meta name="description" content="Administrateur système et réseau, j'interviens auprès des PME en Savoie pour mettre en place et fiabiliser leur infrastructure informatique.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Syne:wght@500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -15,15 +15,15 @@
     :root {
       --bg: #F5F3EC;
       --text: #1A1A10;
-      --muted: #5C5840;
-      --faint: #9A9478;
+      --muted: #4A4632;
+      --faint: #7A7560;
       --accent: #EA580C;
       --olive: #8A9E5A;
       --border: #DDD9CC;
     }
 
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
@@ -35,8 +35,11 @@
     .page { max-width: 620px; width: 100%; }
 
     .header {
-      padding: 2.5rem 0 1.75rem;
-      border-bottom: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+      background-image: linear-gradient(to right, rgba(154, 148, 120, .75) 35%, transparent 35%);
+      background-size: 16px 1px;
+      background-repeat: repeat-x;
+      background-position: bottom;
     }
 
     .mono-tag {
@@ -46,7 +49,7 @@
       display: flex;
       align-items: center;
       gap: 4px;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
 
     .cursor {
@@ -62,11 +65,24 @@
 
     h1 {
       font-family: 'Syne', sans-serif;
-      font-size: 30px;
+      font-size: 34px;
       font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      margin-bottom: .85rem;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+    }
+
+    h1 .savoie {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      white-space: nowrap;
+    }
+
+    h1 .savoie i {
+      font-size: 26px;
+      color: var(--olive);
+      transform: translateY(2px);
     }
 
     h1 em {
@@ -76,15 +92,16 @@
     }
 
     .tagline {
-      font-size: 16px;
-      color: var(--muted);
-      line-height: 1.75;
-      max-width: 460px;
+      font-size: 17px;
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 480px;
+      opacity: .85;
     }
 
     .content { padding-top: 0; }
 
-    .section { margin-top: 2.5rem; }
+    .section { margin-top: 3rem; }
 
     .section-label {
       font-family: 'DM Mono', monospace;
@@ -107,21 +124,21 @@
     .services {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      gap: 14px;
     }
 
     .sc {
-      background: transparent;
+      background: #FFFDF6;
       padding: 1.15rem 1.2rem;
-      transition: background .15s;
+      clip-path: polygon(14px 0, 100% 0, 100% 100%, 0 100%, 0 14px);
+      filter: drop-shadow(0 1px 2px rgba(26, 26, 16, .05));
+      transition: background .15s, filter .15s;
     }
 
-    .sc:hover { background: rgba(138, 158, 90, .06); }
-
-    .sc:nth-child(1) { clip-path: polygon(14px 0, 100% 0, 100% 100%, 0 100%, 0 14px); outline: 1.5px solid var(--olive); }
-    .sc:nth-child(2) { clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%); outline: 1.5px solid var(--olive); }
-    .sc:nth-child(3) { clip-path: polygon(0 0, 100% 0, 100% 100%, 14px 100%, 0 calc(100% - 14px)); outline: 1.5px solid var(--olive); }
-    .sc:nth-child(4) { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); outline: 1.5px solid var(--olive); }
+    .sc:hover {
+      background: rgba(138, 158, 90, .06);
+      filter: drop-shadow(0 2px 6px rgba(26, 26, 16, .08));
+    }
 
     .sc-head {
       display: flex;
@@ -132,46 +149,53 @@
 
     .sc-name {
       font-family: 'Syne', sans-serif;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       color: var(--text);
     }
 
     .sc-num {
       font-family: 'DM Mono', monospace;
-      font-size: 11px;
+      font-size: 18px;
       color: var(--accent);
+      font-weight: 400;
     }
 
     .sc-desc {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--muted);
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     .about-text {
-      font-size: 16px;
+      font-size: 15px;
       color: var(--muted);
-      line-height: 1.8;
+      line-height: 1.7;
     }
 
     .contact {
-      margin-top: 2.5rem;
-      background: transparent;
-      outline: 1.5px solid var(--olive);
+      margin-top: 3rem;
+      background: #FFFDF6;
       padding: 1.5rem 2rem;
       cursor: pointer;
-      transition: background .15s;
+      transition: background .15s, filter .15s;
       clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+      filter: drop-shadow(0 1px 2px rgba(26, 26, 16, .05));
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: .6rem;
       border: none;
       width: 100%;
+      text-decoration: none;
+      color: inherit;
+      font: inherit;
     }
 
-    .contact:hover { background: rgba(138, 158, 90, .06); }
+    .contact:hover {
+      background: rgba(138, 158, 90, .06);
+      filter: drop-shadow(0 4px 10px rgba(26, 26, 16, .09));
+    }
 
     .contact-row {
       display: flex;
@@ -224,7 +248,8 @@
     .contact:hover .mail-icon { animation: wiggle .5s ease; }
 
     @media (max-width: 480px) {
-      h1 { font-size: 22px; }
+      h1 { font-size: 26px; }
+      h1 .savoie i { font-size: 20px; }
       .services { grid-template-columns: 1fr; }
     }
   </style>
@@ -233,8 +258,8 @@
   <div class="page">
     <div class="header">
       <div class="mono-tag">~/nmary.net <span class="cursor"></span></div>
-      <h1>Système, réseau<br><em>et cybersécurité</em><br>en Savoie</h1>
-      <p class="tagline">J'interviens auprès des PME pour mettre en place et fiabiliser leur infrastructure informatique — sur site, en Savoie.</p>
+      <h1>Système, réseau,<br>cybersécurité<br><span class="savoie"><em>en Savoie</em><i class="ti ti-mountain" aria-hidden="true"></i></span></h1>
+      <p class="tagline">J'interviens auprès des PME pour mettre en place et fiabiliser leur infrastructure informatique, sur site, en Savoie.</p>
     </div>
 
     <div class="content">
@@ -266,25 +291,28 @@
       </div>
 
       <div class="section">
-        <button class="contact" onclick="copyEmail()">
+        <a class="contact" href="mailto:nicolas@nmary.net" onclick="copyEmail(event)">
           <div class="contact-row">
             <i class="ti ti-mail mail-icon" aria-hidden="true"></i>
             <span class="contact-label">Parlons-en</span>
           </div>
           <span class="contact-email">nicolas@nmary.net</span>
           <div class="copied" id="copiedMsg">✓ Adresse copiée</div>
-        </button>
+        </a>
       </div>
     </div>
   </div>
 
   <script>
-    function copyEmail() {
-      navigator.clipboard.writeText('nicolas@nmary.net').then(() => {
-        const msg = document.getElementById('copiedMsg');
-        msg.classList.add('show');
-        setTimeout(() => msg.classList.remove('show'), 2000);
-      });
+    function copyEmail(event) {
+      if (navigator.clipboard && window.isSecureContext) {
+        event.preventDefault();
+        navigator.clipboard.writeText('nicolas@nmary.net').then(() => {
+          const msg = document.getElementById('copiedMsg');
+          msg.classList.add('show');
+          setTimeout(() => msg.classList.remove('show'), 2000);
+        });
+      }
     }
   </script>
 </body>
