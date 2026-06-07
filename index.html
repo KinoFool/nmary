@@ -43,16 +43,52 @@
       background-position: bottom;
     }
 
-    .brand-mark {
+    .brand-mark-wrap {
       position: absolute;
       top: 2.5rem;
       right: -8px;
-      width: auto;
+      width: 172px;
       height: 170px;
       color: var(--text);
-      opacity: .07;
+      z-index: 2;
+    }
+
+    .brand-mark {
+      width: 100%;
+      height: 100%;
       pointer-events: none;
-      z-index: 0;
+    }
+
+    .watermark {
+      fill: currentColor;
+      opacity: .1;
+      transition: opacity .4s ease;
+    }
+
+    .signature {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linejoin: round;
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      opacity: 0;
+      /* on un-hover: opacity fades, then dashoffset resets invisibly */
+      transition: opacity .3s ease, stroke-dashoffset 0s linear .3s;
+    }
+
+    .brand-mark-wrap:hover .signature {
+      stroke-dashoffset: 0;
+      opacity: 1;
+      transition: stroke-dashoffset .8s cubic-bezier(.65, 0, .35, 1), opacity .1s ease;
+    }
+
+    .brand-mark-wrap:hover .signature--m { transition-delay: .15s; }
+
+    /* Ink soak: watermark deepens during and after the signature draws */
+    .brand-mark-wrap:hover .watermark {
+      opacity: .18;
+      transition: opacity 1.3s ease .3s;
     }
 
     .header h1,
@@ -266,10 +302,14 @@
 <body>
   <div class="page">
     <div class="header">
-      <svg class="brand-mark" viewBox="0 0 189 187" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-label="NMARY">
-        <path d="M75.1333 155L96.68 68.6H119.4L126.547 129.507H126.973L164.52 68.6H188.84L167.293 155H149.693L164.84 93.9867H164.413L128.04 155H113.213L107.24 93.9867H106.813L91.6667 155H75.1333Z"/>
-        <path d="M76.5867 128H58.6667L33.8133 68.6933H33.3867L18.6667 128H2.13333L23.68 41.6H40.7467L66.1333 102.187H66.56L81.6 41.6H98.1333L76.5867 128Z"/>
+      <div class="brand-mark-wrap">
+      <svg class="brand-mark" viewBox="0 0 189 187" xmlns="http://www.w3.org/2000/svg" aria-label="NMARY">
+        <path class="watermark" d="M76.5867 128H58.6667L33.8133 68.6933H33.3867L18.6667 128H2.13333L23.68 41.6H40.7467L66.1333 102.187H66.56L81.6 41.6H98.1333L76.5867 128Z"/>
+        <path class="watermark" d="M75.1333 155L96.68 68.6H119.4L126.547 129.507H126.973L164.52 68.6H188.84L167.293 155H149.693L164.84 93.9867H164.413L128.04 155H113.213L107.24 93.9867H106.813L91.6667 155H75.1333Z"/>
+        <path class="signature signature--n" pathLength="100" d="M98.1333 41.6L76.5867 128H58.6667L33.8133 68.6933H33.3867L18.6667 128H2.13333L23.68 41.6H40.7467L66.1333 102.187H66.56L81.6 41.6Z"/>
+        <path class="signature signature--m" pathLength="100" d="M75.1333 155L96.68 68.6H119.4L126.547 129.507H126.973L164.52 68.6H188.84L167.293 155H149.693L164.84 93.9867H164.413L128.04 155H113.213L107.24 93.9867H106.813L91.6667 155H75.1333Z"/>
       </svg>
+      </div>
       <h1>Système, réseau,<br>cybersécurité<br><span class="savoie"><em>en Savoie</em><i class="ti ti-mountain" aria-hidden="true"></i></span></h1>
       <p class="tagline">J'interviens auprès des PME pour mettre en place et fiabiliser leur infrastructure informatique, sur site, en Savoie.</p>
     </div>
