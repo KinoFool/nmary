@@ -1,372 +1,161 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NMARY</title>
-  <link rel="icon" type="image/svg+xml" href="svg/NM.svg">
-	<meta name="description" content="Administrateur système et réseau, j'interviens auprès des PME en Savoie pour mettre en place et fiabiliser leur infrastructure informatique.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg: #F5F3EC;
-      --text: #1A1A10;
-      --muted: #4A4632;
-      --faint: #7A7560;
-      --accent: #EA580C;
-      --olive: #8A9E5A;
-      --border: #DDD9CC;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 0 1.5rem 5rem;
-    }
-
-    .page { max-width: 620px; width: 100%; }
-
-    .header {
-      position: relative;
-      padding: 3rem 0 2rem;
-      background-image: linear-gradient(to right, rgba(154, 148, 120, .75) 35%, transparent 35%);
-      background-size: 16px 1px;
-      background-repeat: repeat-x;
-      background-position: bottom;
-    }
-
-    .brand-mark-wrap {
-      position: absolute;
-      top: 2.5rem;
-      right: -8px;
-      width: 172px;
-      height: 170px;
-      color: var(--text);
-      z-index: 2;
-    }
-
-    .brand-mark {
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-
-    .watermark {
-      fill: currentColor;
-      opacity: .1;
-      transition: opacity .4s ease;
-    }
-
-    .signature {
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.5;
-      stroke-linejoin: round;
-      stroke-dasharray: 100;
-      stroke-dashoffset: 100;
-      opacity: 0;
-      /* on un-hover: opacity fades, then dashoffset resets invisibly */
-      transition: opacity .3s ease, stroke-dashoffset 0s linear .3s;
-    }
-
-    .brand-mark-wrap:hover .signature {
-      stroke-dashoffset: 0;
-      opacity: 1;
-      transition: stroke-dashoffset .8s cubic-bezier(.65, 0, .35, 1), opacity .1s ease;
-    }
-
-    .brand-mark-wrap:hover .signature--m { transition-delay: .15s; }
-
-    /* Ink soak: watermark deepens during and after the signature draws */
-    .brand-mark-wrap:hover .watermark {
-      opacity: .18;
-      transition: opacity 1.3s ease .3s;
-    }
-
-    .header h1,
-    .header .tagline {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cursor {
-      display: inline-block;
-      width: 7px;
-      height: 12px;
-      background: var(--accent);
-      animation: blink 1.2s step-end infinite;
-      vertical-align: middle;
-    }
-
-    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-
-    h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: 34px;
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.025em;
-      margin-bottom: 1rem;
-    }
-
-    h1 .savoie {
-      display: inline-flex;
-      align-items: center;
-      gap: .35rem;
-      white-space: nowrap;
-    }
-
-    h1 .savoie i {
-      font-size: 26px;
-      color: var(--olive);
-      transform: translateY(2px);
-    }
-
-    h1 em {
-      font-style: normal;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .tagline {
-      font-size: 17px;
-      color: var(--text);
-      line-height: 1.6;
-      max-width: 480px;
-      opacity: .85;
-    }
-
-    .content { padding-top: 0; }
-
-    .section { margin-top: 3rem; }
-
-    .section-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 12px;
-      color: var(--faint);
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .section-label::before {
-      content: '>';
-      color: var(--accent);
-      font-size: 12px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .sc {
-      background: #FFFDF6;
-      padding: 1.15rem 1.2rem;
-      clip-path: polygon(14px 0, 100% 0, 100% 100%, 0 100%, 0 14px);
-      filter: drop-shadow(0 1px 2px rgba(26, 26, 16, .05));
-      transition: background .15s, filter .15s;
-    }
-
-    .sc:hover {
-      background: rgba(138, 158, 90, .06);
-      filter: drop-shadow(0 2px 6px rgba(26, 26, 16, .08));
-    }
-
-    .sc-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: .4rem;
-    }
-
-    .sc-name {
-      font-family: 'Syne', sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .sc-num {
-      font-family: 'DM Mono', monospace;
-      font-size: 18px;
-      color: var(--accent);
-      font-weight: 400;
-    }
-
-    .sc-desc {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .about-text {
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .contact {
-      margin-top: 3rem;
-      background: #FFFDF6;
-      padding: 1.5rem 2rem;
-      cursor: pointer;
-      transition: background .15s, filter .15s;
-      clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
-      filter: drop-shadow(0 1px 2px rgba(26, 26, 16, .05));
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: .6rem;
-      border: none;
-      width: 100%;
-      text-decoration: none;
-      color: inherit;
-      font: inherit;
-    }
-
-    .contact:hover {
-      background: rgba(138, 158, 90, .06);
-      filter: drop-shadow(0 4px 10px rgba(26, 26, 16, .09));
-    }
-
-    .contact-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .contact-row i {
-      font-size: 20px;
-      color: var(--accent);
-    }
-
-    .contact-label {
-      font-family: 'Syne', sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .contact-email {
-      font-family: 'DM Mono', monospace;
-      font-size: 15px;
-      color: var(--muted);
-      border-bottom: 1px dashed var(--olive);
-      padding-bottom: 1px;
-      transition: color .15s;
-    }
-
-    .contact:hover .contact-email { color: var(--text); }
-
-    .copied {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      color: var(--olive);
-      opacity: 0;
-      transition: opacity .3s;
-      height: 14px;
-    }
-
-    .copied.show { opacity: 1; }
-
-    @keyframes wiggle {
-      0%, 100% { transform: rotate(0deg); }
-      20% { transform: rotate(-12deg); }
-      40% { transform: rotate(10deg); }
-      60% { transform: rotate(-8deg); }
-      80% { transform: rotate(6deg); }
-    }
-
-    .contact:hover .mail-icon { animation: wiggle .5s ease; }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 26px; }
-      h1 .savoie i { font-size: 20px; }
-      .services { grid-template-columns: 1fr; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NMARY — Consultant IT en Savoie</title>
+<meta name="description" content="Consultant IT indépendant à Aix-les-Bains, Savoie. Réseau, serveurs, cybersécurité pour PME.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page">
-    <div class="header">
-      <div class="brand-mark-wrap">
-      <svg class="brand-mark" viewBox="0 0 189 187" xmlns="http://www.w3.org/2000/svg" aria-label="NMARY">
-        <path class="watermark" d="M76.5867 128H58.6667L33.8133 68.6933H33.3867L18.6667 128H2.13333L23.68 41.6H40.7467L66.1333 102.187H66.56L81.6 41.6H98.1333L76.5867 128Z"/>
-        <path class="watermark" d="M75.1333 155L96.68 68.6H119.4L126.547 129.507H126.973L164.52 68.6H188.84L167.293 155H149.693L164.84 93.9867H164.413L128.04 155H113.213L107.24 93.9867H106.813L91.6667 155H75.1333Z"/>
-        <path class="signature signature--n" pathLength="100" d="M98.1333 41.6L76.5867 128H58.6667L33.8133 68.6933H33.3867L18.6667 128H2.13333L23.68 41.6H40.7467L66.1333 102.187H66.56L81.6 41.6Z"/>
-        <path class="signature signature--m" pathLength="100" d="M75.1333 155L96.68 68.6H119.4L126.547 129.507H126.973L164.52 68.6H188.84L167.293 155H149.693L164.84 93.9867H164.413L128.04 155H113.213L107.24 93.9867H106.813L91.6667 155H75.1333Z"/>
-      </svg>
-      </div>
-      <h1>Système, réseau,<br>cybersécurité<br><span class="savoie"><em>en Savoie</em><i class="ti ti-mountain" aria-hidden="true"></i></span></h1>
-      <p class="tagline">J'interviens auprès des PME pour mettre en place et fiabiliser leur infrastructure informatique, sur site, en Savoie.</p>
-    </div>
+<div class="page">
+  <div class="container">
 
-    <div class="content">
-      <div class="section">
-        <div class="section-label">Prestations</div>
-        <div class="services">
-          <div class="sc">
-            <div class="sc-head"><span class="sc-name">Réseau</span><span class="sc-num">01</span></div>
-            <div class="sc-desc">Configuration, installation physique, firewall, VLANs, WiFi</div>
-          </div>
-          <div class="sc">
-            <div class="sc-head"><span class="sc-name">Serveurs</span><span class="sc-num">02</span></div>
-            <div class="sc-desc">Installation et administration de serveurs Linux</div>
-          </div>
-          <div class="sc">
-            <div class="sc-head"><span class="sc-name">Cybersécurité</span><span class="sc-num">03</span></div>
-            <div class="sc-desc">Durcissement, gestion des accès, bonnes pratiques</div>
-          </div>
-          <div class="sc">
-            <div class="sc-head"><span class="sc-name">Autre besoin ?</span><span class="sc-num">--</span></div>
-            <div class="sc-desc">N'hésitez pas à en discuter</div>
-          </div>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="hero-line1"><em class="hero-you">Votre</em> <span class="hero-role">consultant IT</span></span>
+          <span class="hero-line2">Système, réseau &amp; cybersécurité</span>
+          <span class="hero-badge">EN SAVOIE</span>
+        </h1>
+        <p class="hero-desc">Consultant IT indépendant, j'accompagne les PME dans le choix, la mise en place et le suivi de leur infrastructure informatique, sur site, en Savoie et au-delà.</p>
+        <div class="hero-actions">
+          <a class="cta" href="mailto:nicolas@nmary.net">Parlons-en<i class="ti ti-arrow-up-right cta-arrow"></i></a>
+          <a class="cta-ghost" href="#prestations">
+            <span class="cta-ghost-inner">Voir les prestations</span>
+          </a>
         </div>
       </div>
-
-      <div class="section">
-        <div class="section-label">Mon parcours</div>
-        <p class="about-text">Diplômé Epitech en ingénierie système et réseau, spécialisation cybersécurité. Plusieurs années sur des infrastructures complexes à Paris, rentré en Savoie. Je privilégie les solutions open source, simples et pérennes.</p>
-      </div>
-
-      <div class="section">
-        <a class="contact" href="mailto:nicolas@nmary.net" onclick="copyEmail(event)">
-          <div class="contact-row">
-            <i class="ti ti-mail mail-icon" aria-hidden="true"></i>
-            <span class="contact-label">Parlons-en</span>
-          </div>
-          <span class="contact-email">nicolas@nmary.net</span>
-          <div class="copied" id="copiedMsg">✓ Adresse copiée</div>
-        </a>
+      <div class="mark">
+        <svg viewBox="0 0 189 187" aria-label="NMARY">
+          <path class="wm" d="M76.5867 128H58.6667L33.8133 68.6933H33.3867L18.6667 128H2.13333L23.68 41.6H40.7467L66.1333 102.187H66.56L81.6 41.6H98.1333L76.5867 128Z"></path>
+          <path class="wm" d="M75.1333 155L96.68 68.6H119.4L126.547 129.507H126.973L164.52 68.6H188.84L167.293 155H149.693L164.84 93.9867H164.413L128.04 155H113.213L107.24 93.9867H106.813L91.6667 155H75.1333Z"></path>
+        </svg>
       </div>
     </div>
-  </div>
 
-  <script>
-    function copyEmail(event) {
-      if (navigator.clipboard && window.isSecureContext) {
-        event.preventDefault();
-        navigator.clipboard.writeText('nicolas@nmary.net').then(() => {
-          const msg = document.getElementById('copiedMsg');
-          msg.classList.add('show');
-          setTimeout(() => msg.classList.remove('show'), 2000);
-        });
-      }
-    }
-  </script>
+    <!-- PRESTATIONS -->
+    <div id="prestations" class="section">
+      <div class="section-header">
+        <span class="section-title">Prestations</span>
+      </div>
+      <p class="section-intro">Un accompagnement et du conseil, du diagnostic à la mise en œuvre.</p>
+      <div class="grid">
+        <div class="card row">
+          <div class="card-title">
+            <i class="ti ti-network card-icon"></i>
+            <span>Réseau</span>
+          </div>
+          <div class="card-desc">Conseil et mise en place : câblage, WiFi, firewall, VLANs, un réseau pensé pour votre activité.</div>
+        </div>
+        <div class="card row">
+          <div class="card-title">
+            <i class="ti ti-server-2 card-icon"></i>
+            <span>Serveurs</span>
+          </div>
+          <div class="card-desc">Choix, installation et administration de vos serveurs Linux, en fonction de vos besoins réels.</div>
+        </div>
+        <div class="card row">
+          <div class="card-title">
+            <i class="ti ti-shield-lock card-icon"></i>
+            <span>Cybersécurité</span>
+          </div>
+          <div class="card-desc">Audit, durcissement et gestion des accès pour réduire vos risques au quotidien.</div>
+        </div>
+        <div class="card row">
+          <div class="card-title">
+            <i class="ti ti-mail card-icon"></i>
+            <span>Autre besoin ?</span>
+          </div>
+          <div class="card-desc">Un projet qui ne rentre pas dans les cases ? Parlons-en, on trouvera une solution.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARCOURS -->
+    <div id="parcours" class="section">
+      <div class="section-header">
+        <span class="section-title">Mon parcours</span>
+      </div>
+      <p class="parcours-text">Diplômé Epitech en ingénierie système et réseau, spécialisation cybersécurité. Plusieurs années passées sur des infrastructures complexes à Paris, puis retour en Savoie. Je privilégie les solutions <span>open source</span>, simples et pérennes.</p>
+    </div>
+
+    <!-- ZONE -->
+    <div id="zone" class="section">
+      <div class="section-header">
+        <span class="section-title">Où j'interviens</span>
+      </div>
+      <div class="card zone-box">
+        <div class="zone-info">
+          <div class="zone-heading"><i class="ti ti-map-pin"></i><span>Basé en Savoie, mobile partout</span></div>
+          <p class="zone-desc">Mon point d'ancrage est <strong>Aix-les-Bains</strong> et j'interviens sur site dans toute la Savoie. Un projet à Paris ou ailleurs ? Le déplacement se discute.</p>
+        </div>
+        <div class="zone-address">
+          <div class="zone-address-label"><b>Adresse</b></div>
+          725 boulevard Robert Barrier<br>73100 Aix-les-Bains
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Questions fréquentes</span>
+      </div>
+      <div class="faq-list">
+        <div class="card faq-item">
+          <div class="faq-question">Intervenez-vous sur site ?</div>
+          <div class="faq-answer">Oui, le déplacement sur site est ma manière de travailler, en Savoie comme ailleurs si le projet le demande.</div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-question">Travaillez-vous avec des solutions propriétaires ?</div>
+          <div class="faq-answer">Je privilégie l'open source, mais je m'adapte à votre existant et à vos contraintes.</div>
+        </div>
+        <div class="card faq-item">
+          <div class="faq-question">Comment sont établis les tarifs ?</div>
+          <div class="faq-answer">Au forfait ou à la journée selon la mission, après un premier échange gratuit.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="contact-wrap">
+      <div class="contact-divider"></div>
+      <a class="contact" href="mailto:nicolas@nmary.net">
+        <div class="contact-inner">
+          <div class="contact-label">UN BESOIN, UNE QUESTION ?</div>
+          <div class="contact-heading">
+            <i class="ti ti-mail mail-icon"></i>
+            <span class="contact-title">Parlons-en.</span>
+          </div>
+          <div class="contact-footer">
+            <span class="contact-email">nicolas@nmary.net</span>
+            <span class="copied-confirm">✓ copié</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="footer-legal">Nicolas Mary — Entrepreneur Individuel · SIRET [à compléter]</div>
+      <nav class="footer-nav">
+        <a class="footer-link link-dashed" href="mentions-legales.html">Mentions légales</a>
+        <span>·</span>
+        <a class="footer-link link-dashed" href="cgv.html">CGV</a>
+      </nav>
+      <div class="footer-bottom">
+        <span>© 2026 <a class="footer-brand" href="https://nmary.net">NMARY.net</a></span>
+        <span>Aix-les-Bains, Savoie</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
