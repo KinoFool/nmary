@@ -90,7 +90,6 @@ a:hover { color: #F6A46B; }
 .contact-footer { display: flex; flex-direction: column; align-items: center; gap: 6px; }
 .contact-email { font-family: 'DM Mono', monospace; font-size: 24px; font-weight: 600; color: #141410; border-bottom: 1px dashed #EA580C; padding-bottom: 3px; background-image: linear-gradient(#EA580C,#EA580C); background-repeat: no-repeat; background-position: left bottom; background-size: 0% 2px; transition: color .18s, background-size .4s cubic-bezier(.65,0,.35,1), border-color .18s; }
 .contact:hover .contact-email { border-color: transparent; background-size: 100% 2px; }
-.copied-confirm { font-family: 'DM Mono', monospace; font-size: 11px; color: #8A9E5A; opacity: 0; transition: opacity .3s; }
 
 /* ---- Footer ---- */
 .footer { display: flex; flex-direction: column; align-items: center; gap: 1.1rem; font-family: 'DM Mono', monospace; font-size: 13px; color: #9A9578; border-top: 1px solid rgba(20,20,16,.1); }
