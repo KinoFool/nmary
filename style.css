@@ -123,10 +123,13 @@ a:hover { color: #F6A46B; }
   .hero { display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; padding: 4.5rem 3rem; }
   .hero-text { max-width: 520px; }
   .mark { position: static; width: 400px; height: 396px; flex-shrink: 0; }
-  .grid { grid-template-columns: repeat(4,1fr); }
   .section { padding: 4.5rem 3rem 0; }
   .contact-wrap { margin: 2.6rem 3rem 3.2rem; }
   .footer { padding: 2rem 3rem; }
+}
+
+@media (min-width: 1000px) {
+  .grid { grid-template-columns: repeat(4,1fr); }
 }
 
 /* ---- Legal pages (mentions-legales.html, cgv.html) ---- */
