@@ -107,11 +107,16 @@ a:hover { color: #F6A46B; }
 .hero { position: relative; color: #141410; overflow: hidden; background-color: #FFFDF6; padding: 2.6rem 1.5rem 3rem; scroll-margin-top: 64px; }
 .hero-text { position: relative; z-index: 1; max-width: none; }
 .mark { position: absolute; top: 2.5rem; right: 1.2rem; width: 340px; height: 337px; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 1.2rem; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 1.2rem; }
+.grid > .card { min-width: 0; }
 .section { padding: 3rem 1.5rem 0; }
 #prestations, #zone { scroll-margin-top: 64px; }
 .contact-wrap { margin: 2rem 1.5rem 2.4rem; scroll-margin-top: 64px; }
 .footer { padding: 1.6rem 1.5rem; }
+
+@media (min-width: 560px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
 
 @media (min-width: 860px) {
   .container { max-width: 1080px; }
