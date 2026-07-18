@@ -52,13 +52,13 @@ a:hover { color: #F6A46B; }
 
 /* ---- Card component (prestations, zone, faq) ---- */
 .card { background: #FFFDF6; clip-path: polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px); filter: drop-shadow(0 1px 2px rgba(20,20,16,.06)); }
-.card-title { font-weight: 600; font-size: 19px; letter-spacing: -.01em; line-height: 1.2; display: flex; align-items: center; gap: 10px; }
+.card-title { margin: 0; font-weight: 600; font-size: 19px; letter-spacing: -.01em; line-height: 1.2; display: flex; align-items: center; gap: 10px; }
 .card-icon { font-size: 26px; color: #EA580C; flex-shrink: 0; }
 .card-desc { font-size: 14px; color: #4A4632; line-height: 1.55; margin-top: .35rem; }
 
 /* ---- Section header ---- */
 .section-header { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid #141410; padding-bottom: .7rem; }
-.section-title { font-weight: 700; font-size: 20px; letter-spacing: -.02em; display: inline-flex; align-items: center; gap: .6rem; }
+.section-title { margin: 0; font-weight: 700; font-size: 20px; letter-spacing: -.02em; display: inline-flex; align-items: center; gap: .6rem; }
 .section-index { font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 500; color: #EA580C; letter-spacing: .04em; line-height: 1; position: relative; top: 1px; }
 .section-intro { font-size: 15px; color: #4A4632; line-height: 1.6; margin: 1rem 0 0; }
 .section-cta { font-size: 15px; font-weight: 600; color: #141410; margin: 1.25rem 0 0; }
