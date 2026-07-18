@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<!-- Source for assets/og.png (1200x630). Edit here, then re-render from repo root:
+     chromium --headless --no-sandbox --hide-scrollbars --force-device-scale-factor=1 \
+       --window-size=1200,630 --virtual-time-budget=2000 \
+       --screenshot=assets/og.png "file://$PWD/src/og-template.html" -->
+<style>
+  @font-face { font-family: 'Space Grotesk'; src: url('../assets/fonts/space-grotesk-latin.woff2') format('woff2'); font-weight: 400 700; font-display: block; }
+  @font-face { font-family: 'DM Mono'; src: url('../assets/fonts/dm-mono-500-latin.woff2') format('woff2'); font-weight: 500; font-display: block; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  .card {
+    position: relative; width: 1200px; height: 630px; overflow: hidden;
+    background: #F7F5EF; color: #141410;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 76px 80px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .wm { position: absolute; right: -60px; top: 50%; transform: translateY(-50%); width: 620px; height: 613px; }
+  .wm path { fill: #141410; opacity: .10; }
+  .content { position: relative; max-width: 760px; }
+  .l1 { font-size: 68px; line-height: 1.05; letter-spacing: -.03em; color: #3A3728; }
+  .l1 .you { font-style: italic; font-weight: 400; color: #8A8564; }
+  .l1 .role { font-weight: 700; color: #141410; }
+  .l2 { font-size: 40px; font-weight: 500; letter-spacing: -.01em; color: #4A4632; margin-top: 14px; }
+  .badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 22px; font-weight: 500; letter-spacing: .16em; color: #EA580C; margin-top: 20px; }
+  .desc { font-size: 25px; line-height: 1.5; color: #4A4632; margin-top: 34px; max-width: 720px; }
+  .rule { position: absolute; left: 80px; right: 80px; bottom: 50px; border-top: 2px solid #141410; padding-top: 18px; display: flex; justify-content: space-between; align-items: baseline; font-family: 'DM Mono', monospace; font-size: 27px; letter-spacing: .03em; color: #141410; }
+  .rule .accent { color: #EA580C; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <svg class="wm" viewBox="0 0 189 187" aria-hidden="true">
+      <path d="M76.5867 128H58.6667L33.8133 68.6933H33.3867L18.6667 128H2.13333L23.68 41.6H40.7467L66.1333 102.187H66.56L81.6 41.6H98.1333L76.5867 128Z"></path>
+      <path d="M75.1333 155L96.68 68.6H119.4L126.547 129.507H126.973L164.52 68.6H188.84L167.293 155H149.693L164.84 93.9867H164.413L128.04 155H113.213L107.24 93.9867H106.813L91.6667 155H75.1333Z"></path>
+    </svg>
+    <div class="content">
+      <div class="l1"><span class="you">Votre</span> <span class="role">consultant IT</span></div>
+      <div class="l2">Système, réseau &amp; cybersécurité</div>
+      <div class="badge">EN SAVOIE</div>
+      <div class="desc">Consultant IT indépendant, j'accompagne les PME dans le choix, la mise en place et le suivi de leur infrastructure informatique, sur site, en Savoie.</div>
+    </div>
+    <div class="rule">
+      <span>nmary.net</span>
+      <span class="accent">contact@nmary.net</span>
+    </div>
+  </div>
+</body>
+</html>
