@@ -2,6 +2,7 @@
 
 html { scroll-behavior: smooth; }
 body { margin: 0; }
+.icon { display: inline-block; width: 1em; height: 1em; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
 a { color: #EA580C; text-decoration: none; }
 a:hover { color: #F6A46B; }
 
@@ -25,8 +26,8 @@ a:hover { color: #F6A46B; }
 
 /* ---- Section header ---- */
 .section-header { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid #141410; padding-bottom: .7rem; }
-.section-title { font-weight: 700; font-size: 20px; letter-spacing: -.02em; }
-.section-index { font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 500; color: #EA580C; letter-spacing: .04em; margin-right: .6rem; }
+.section-title { font-weight: 700; font-size: 20px; letter-spacing: -.02em; display: inline-flex; align-items: center; gap: .6rem; }
+.section-index { font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 500; color: #EA580C; letter-spacing: .04em; line-height: 1; position: relative; top: 1px; }
 .section-intro { font-size: 15px; color: #4A4632; line-height: 1.6; margin: 1rem 0 0; }
 .section-cta { font-size: 15px; font-weight: 600; color: #141410; margin: 1.25rem 0 0; }
 
@@ -67,7 +68,7 @@ a:hover { color: #F6A46B; }
 .zone-box { padding: 1.4rem 1.5rem; margin-top: 1.2rem; display: flex; gap: 1.6rem; align-items: center; flex-wrap: wrap; justify-content: space-between; }
 .zone-info { flex: 1; min-width: 240px; }
 .zone-heading { display: flex; align-items: center; gap: 8px; margin-bottom: .6rem; }
-.zone-heading i { font-size: 20px; color: #8A9E5A; }
+.zone-heading .icon { font-size: 20px; color: #8A9E5A; }
 .zone-heading span { font-weight: 600; font-size: 17px; }
 .zone-desc { font-size: 15px; color: #4A4632; line-height: 1.7; margin: 0; max-width: 380px; }
 .zone-areas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem; }
@@ -126,6 +127,8 @@ a:hover { color: #F6A46B; }
 
 @media (min-width: 560px) {
   .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 560px) and (max-width: 859px) {
   .grid .card-title { min-height: 2.4em; }
 }
 
@@ -137,10 +140,6 @@ a:hover { color: #F6A46B; }
   .section { padding: 4.5rem 3rem 0; }
   .contact-wrap { margin: 2.6rem 3rem 3.2rem; }
   .footer { padding: 2rem 3rem; }
-}
-
-@media (min-width: 1000px) {
-  .grid { grid-template-columns: repeat(4,1fr); }
 }
 
 /* ---- Legal pages (mentions-legales.html, cgv.html) ---- */
