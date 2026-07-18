@@ -26,6 +26,7 @@ a:hover { color: #F6A46B; }
 /* ---- Section header ---- */
 .section-header { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid #141410; padding-bottom: .7rem; }
 .section-title { font-weight: 700; font-size: 20px; letter-spacing: -.02em; }
+.section-index { font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 500; color: #EA580C; letter-spacing: .04em; margin-right: .6rem; }
 .section-intro { font-size: 15px; color: #4A4632; line-height: 1.6; margin: 1rem 0 0; }
 .section-cta { font-size: 15px; font-weight: 600; color: #141410; margin: 1.25rem 0 0; }
 
@@ -55,7 +56,9 @@ a:hover { color: #F6A46B; }
 
 /* ---- Prestations grid ---- */
 .row { padding: 1.2rem 1.3rem; transition: background .18s ease, filter .18s ease; }
-.row:hover { background: rgba(138,158,90,.08); filter: drop-shadow(0 3px 8px rgba(20,20,16,.1)); }
+.row:hover { background: rgba(234,88,12,.06); filter: drop-shadow(0 3px 8px rgba(20,20,16,.1)); }
+.card-num { display: block; text-align: right; font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: .06em; color: #C7C0AD; margin-bottom: .5rem; transition: color .18s ease; }
+.row:hover .card-num { color: #EA580C; }
 
 /* ---- Parcours ---- */
 .parcours-text { font-size: 17px; color: #2E2B1E; line-height: 1.7; margin: 1.3rem 0 0; }
@@ -67,14 +70,19 @@ a:hover { color: #F6A46B; }
 .zone-heading i { font-size: 20px; color: #8A9E5A; }
 .zone-heading span { font-weight: 600; font-size: 17px; }
 .zone-desc { font-size: 15px; color: #4A4632; line-height: 1.7; margin: 0; max-width: 380px; }
+.zone-areas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem; }
+.zone-chip { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: .03em; color: #2E2B1E; background: #F2EFE6; border: 1px solid #E2DCCC; padding: .34rem .72rem; clip-path: polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px); }
 .zone-address { font-family: 'DM Mono', monospace; font-size: 13px; color: #2E2B1E; line-height: 1.7; white-space: nowrap; border-left: 1px solid #D8D2C4; padding-left: 1.6rem; }
 .zone-address-label { color: #B0A98F; text-transform: uppercase; letter-spacing: .1em; font-size: 10px; margin-bottom: .5rem; }
 
 /* ---- FAQ ---- */
 .faq-list { display: flex; flex-direction: column; gap: 10px; margin-top: 1.2rem; }
 .faq-item { padding: 1.1rem 1.3rem; }
-.faq-question { font-weight: 600; font-size: 16px; letter-spacing: -.01em; }
-.faq-answer { font-size: 14px; color: #4A4632; line-height: 1.6; margin-top: .35rem; max-width: 520px; }
+.faq-question { font-weight: 600; font-size: 16px; letter-spacing: -.01em; display: flex; align-items: center; justify-content: space-between; gap: 14px; cursor: pointer; list-style: none; }
+.faq-question::-webkit-details-marker { display: none; }
+.faq-chevron { font-size: 20px; color: #EA580C; flex-shrink: 0; transition: transform .22s ease; }
+.faq-item[open] .faq-chevron { transform: rotate(180deg); }
+.faq-answer { font-size: 14px; color: #4A4632; line-height: 1.6; margin-top: .7rem; max-width: 520px; }
 
 /* ---- Contact ---- */
 .contact-divider { height: 2px; background-image: repeating-linear-gradient(to right, #141410 0 14px, transparent 14px 26px); margin-bottom: 1.8rem; }
