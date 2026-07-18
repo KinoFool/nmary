@@ -19,7 +19,7 @@ a:hover { color: #F6A46B; }
 
 /* ---- Card component (prestations, zone, faq) ---- */
 .card { background: #FFFDF6; clip-path: polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px); filter: drop-shadow(0 1px 2px rgba(20,20,16,.06)); }
-.card-title { font-weight: 600; font-size: 19px; letter-spacing: -.01em; display: flex; align-items: center; gap: 10px; }
+.card-title { font-weight: 600; font-size: 19px; letter-spacing: -.01em; line-height: 1.2; display: flex; align-items: center; gap: 10px; }
 .card-icon { font-size: 26px; color: #EA580C; flex-shrink: 0; }
 .card-desc { font-size: 14px; color: #4A4632; line-height: 1.55; margin-top: .35rem; }
 
@@ -27,6 +27,7 @@ a:hover { color: #F6A46B; }
 .section-header { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid #141410; padding-bottom: .7rem; }
 .section-title { font-weight: 700; font-size: 20px; letter-spacing: -.02em; }
 .section-intro { font-size: 15px; color: #4A4632; line-height: 1.6; margin: 1rem 0 0; }
+.section-cta { font-size: 15px; font-weight: 600; color: #141410; margin: 1.25rem 0 0; }
 
 /* ---- Hero ---- */
 .hero-title { margin: 0; letter-spacing: -.03em; }
@@ -108,6 +109,8 @@ a:hover { color: #F6A46B; }
 .mark { position: absolute; top: 2.5rem; right: 1.2rem; width: 340px; height: 337px; }
 .grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 1.2rem; }
 .grid > .card { min-width: 0; }
+.grid .card-title { align-items: flex-start; }
+.grid .card-icon { line-height: 1.2; }
 .section { padding: 3rem 1.5rem 0; }
 #prestations, #zone { scroll-margin-top: 64px; }
 .contact-wrap { margin: 2rem 1.5rem 2.4rem; scroll-margin-top: 64px; }
@@ -115,6 +118,7 @@ a:hover { color: #F6A46B; }
 
 @media (min-width: 560px) {
   .grid { grid-template-columns: 1fr 1fr; }
+  .grid .card-title { min-height: 2.4em; }
 }
 
 @media (min-width: 860px) {
