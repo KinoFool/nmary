@@ -97,16 +97,19 @@ a:hover { color: #F6A46B; }
 .parcours-text { font-size: 17px; color: #2E2B1E; line-height: 1.7; margin: 1.3rem 0 0; }
 
 /* ---- Zone ---- */
-.zone-box { padding: 1.4rem 1.5rem; margin-top: 1.2rem; display: flex; gap: 1.6rem; align-items: center; flex-wrap: wrap; justify-content: space-between; }
-.zone-info { flex: 1; min-width: 240px; }
-.zone-heading { display: flex; align-items: center; gap: 8px; margin-bottom: .6rem; }
-.zone-heading .icon { font-size: 20px; color: #8A9E5A; }
+.zone-box { display: flex; align-items: center; padding: 1.9rem 2rem; margin-top: 1.2rem; }
+.zone-col { flex: 1; min-width: 0; }
+.zone-col-left { flex: 0 0 42%; padding-right: 2.6rem; }
+.zone-col-right { padding-left: 2.6rem; border-left: 1px solid #E7E1D0; }
+.zone-heading { margin-bottom: .5rem; }
 .zone-heading span { font-weight: 600; font-size: 17px; }
-.zone-desc { font-size: 15px; color: #4A4632; line-height: 1.7; margin: 0; max-width: 380px; }
-.zone-areas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem; }
-.zone-chip { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: .03em; color: #2E2B1E; background: #F2EFE6; border: 1px solid #E2DCCC; padding: .34rem .72rem; clip-path: polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px); }
-.zone-address { font-family: 'DM Mono', monospace; font-size: 13px; color: #2E2B1E; line-height: 1.7; white-space: nowrap; border-left: 1px solid #D8D2C4; padding-left: 1.6rem; }
-.zone-address-label { color: #B0A98F; text-transform: uppercase; letter-spacing: .1em; font-size: 10px; margin-bottom: .5rem; }
+.zone-desc { font-size: 15px; color: #4A4632; line-height: 1.7; margin: 0; }
+.zone-line { font-size: 16px; color: #2E2B1E; line-height: 2.2; margin: 0; }
+.zone-tag { display: inline-flex; align-items: center; gap: 6px; padding: .28rem .66rem; font-weight: 600; font-size: 14px; vertical-align: middle; clip-path: polygon(7px 0,100% 0,100% calc(100% - 7px),calc(100% - 7px) 100%,0 100%,0 7px); }
+.zone-tag .icon { font-size: 17px; }
+.zone-tag.olive { background: rgba(138,158,90,.18); color: #4E5E2A; }
+.zone-tag.orange { background: rgba(234,88,12,.13); color: #B8410C; }
+.zone-note { font-style: italic; font-size: 14px; color: #8A8564; line-height: 1.6; margin: 1rem 0 0; }
 
 /* ---- FAQ ---- */
 .faq-list { display: flex; flex-direction: column; gap: 10px; margin-top: 1.2rem; }
@@ -136,11 +139,13 @@ a:hover { color: #F6A46B; }
 /* ---- Footer ---- */
 .footer { display: flex; flex-direction: column; align-items: center; gap: 1.1rem; font-family: 'DM Mono', monospace; font-size: 13px; color: #9A9578; border-top: 1px solid rgba(20,20,16,.1); }
 .footer-legal { text-align: center; max-width: 620px; line-height: 1.7; }
+.footer-address { display: flex; align-items: center; justify-content: center; gap: 7px; color: #5F5B47; font-size: 13px; }
+.footer-address .icon { font-size: 15px; color: #8A9E5A; flex-shrink: 0; }
 .footer-nav { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
 .link-dashed { text-decoration: underline; text-decoration-style: dashed; text-underline-offset: 2px; }
 .footer-link { color: #9A9578; transition: color .15s ease; }
 .footer-link:hover { color: #EA580C; }
-.footer-bottom { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 12px; flex-wrap: wrap; }
+.footer-bottom { display: flex; align-items: center; justify-content: center; width: 100%; gap: 12px; flex-wrap: wrap; }
 .footer-brand { color: #9A9578; text-decoration: underline; text-decoration-style: dashed; text-underline-offset: 3px; transition: color .15s ease; }
 .footer-brand:hover { color: #141410; }
 
@@ -156,6 +161,12 @@ a:hover { color: #F6A46B; }
 #prestations, #zone { scroll-margin-top: 64px; }
 .contact-wrap { margin: 2rem 1.5rem 2.4rem; scroll-margin-top: 64px; }
 .footer { padding: 1.6rem 1.5rem; }
+
+@media (max-width: 639px) {
+  .zone-box { flex-direction: column; align-items: stretch; }
+  .zone-col-left { flex-basis: auto; padding-right: 0; }
+  .zone-col-right { padding-left: 0; border-left: 0; border-top: 1px solid #E7E1D0; margin-top: 1.3rem; padding-top: 1.3rem; }
+}
 
 @media (min-width: 560px) {
   .grid { grid-template-columns: 1fr 1fr; }

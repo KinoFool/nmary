@@ -19,6 +19,7 @@
   <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"/></symbol>
   <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6l6 -6"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/></symbol>
+  <symbol id="i-world" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/><path d="M11.5 3a17 17 0 0 0 0 18"/><path d="M12.5 3a17 17 0 0 1 0 18"/></symbol>
 </svg>
 <div class="page">
   <div class="container">
@@ -104,19 +105,13 @@
         <span class="section-title"><span class="section-index">03</span>Où j'interviens</span>
       </div>
       <div class="card zone-box">
-        <div class="zone-info">
-          <div class="zone-heading"><svg class="icon"><use href="#i-map-pin"/></svg><span>Basé en Savoie, mobile partout</span></div>
-          <p class="zone-desc">Mon point d'ancrage est <strong>Aix-les-Bains</strong> et j'interviens sur site dans toute la Savoie. Un projet à Paris ou ailleurs ? Le déplacement se discute.</p>
-          <div class="zone-areas">
-            <span class="zone-chip">Aix-les-Bains</span>
-            <span class="zone-chip">Chambéry</span>
-            <span class="zone-chip">Annecy</span>
-            <span class="zone-chip">Savoie</span>
-          </div>
+        <div class="zone-col zone-col-left">
+          <div class="zone-heading"><span>Basé en Savoie, mobile partout</span></div>
+          <p class="zone-desc">Mon point d'ancrage est <strong>Aix-les-Bains</strong>, en Savoie.</p>
         </div>
-        <div class="zone-address">
-          <div class="zone-address-label"><b>Adresse</b></div>
-          725 boulevard Robert Barrier<br>73100 Aix-les-Bains
+        <div class="zone-col zone-col-right">
+          <p class="zone-line">Intervention <span class="zone-tag olive"><svg class="icon"><use href="#i-map-pin"/></svg>sur site</span> ou <span class="zone-tag orange"><svg class="icon"><use href="#i-world"/></svg>à distance</span></p>
+          <p class="zone-note">Bien évidemment, je me déplace même hors de la Savoie si besoin.</p>
         </div>
       </div>
     </div>
@@ -162,6 +157,7 @@
     <!-- FOOTER -->
     <div class="footer">
       <div class="footer-legal">Nicolas Mary — Immatriculation en cours</div>
+      <div class="footer-address"><svg class="icon"><use href="#i-map-pin"/></svg><span>Cité de l'Entreprise · 725 Bd Robert Barrier · 73100 Aix-les-Bains</span></div>
       <nav class="footer-nav">
         <a class="footer-link link-dashed" href="mentions-legales.html">Mentions légales</a>
         <span>·</span>
@@ -169,7 +165,6 @@
       </nav>
       <div class="footer-bottom">
         <span>© 2026 <a class="footer-brand" href="https://nmary.net">NMARY.net</a></span>
-        <span>Aix-les-Bains, Savoie</span>
       </div>
     </div>
 
