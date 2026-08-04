@@ -145,6 +145,9 @@ a:hover { color: #F6A46B; }
 .link-dashed { text-decoration: underline; text-decoration-style: dashed; text-underline-offset: 2px; }
 .footer-link { color: #9A9578; transition: color .15s ease; }
 .footer-link:hover { color: #EA580C; }
+.footer-social { display: inline-flex; align-items: center; gap: 7px; color: #9A9578; transition: color .15s ease; }
+.footer-social .icon { font-size: 17px; }
+.footer-social:hover { color: #EA580C; }
 .footer-bottom { display: flex; align-items: center; justify-content: center; width: 100%; gap: 12px; flex-wrap: wrap; }
 .footer-brand { color: #9A9578; text-decoration: underline; text-decoration-style: dashed; text-underline-offset: 3px; transition: color .15s ease; }
 .footer-brand:hover { color: #141410; }
