@@ -37,177 +37,318 @@
   "description": "Consultant IT indépendant pour PME en Savoie : conseil et audit, accompagnement technique, développement logiciel et support.",
   "url": "https://www.nmary.net",
   "email": "contact@nmary.net",
+  "telephone": "+33743732193",
   "founder": "Nicolas Mary",
+  "sameAs": ["https://www.linkedin.com/in/nmary/"],
   "image": "https://www.nmary.net/assets/svg/NM.svg",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Cité de l'Entreprise, 725 Bd Robert Barrier",
+    "streetAddress": "725 Bd Robert Barrier",
     "postalCode": "73100",
     "addressLocality": "Aix-les-Bains",
     "addressRegion": "Savoie",
     "addressCountry": "FR"
   },
   "areaServed": ["Aix-les-Bains", "Chambéry", "Annecy", "Yenne", "Savoie", "Haute-Savoie"],
-  "knowsAbout": ["Réseau", "Serveurs Linux", "Cybersécurité", "Développement logiciel"]
+  "knowsAbout": ["Réseau", "Serveurs Linux", "Cybersécurité", "Développement logiciel"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Prestations",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Conseil & Audit : système, réseau & cybersécurité",
+          "url": "https://www.nmary.net/conseil-audit.html"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Accompagnement technique",
+          "url": "https://www.nmary.net/accompagnement-technique.html"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Développement logiciel sur mesure",
+          "url": "https://www.nmary.net/developpement-logiciel.html"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Support informatique ponctuel",
+          "url": "https://www.nmary.net/support.html"
+        }
+      }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment sont établis les tarifs ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Je travaille à la journée, et le nombre de jours est estimé et annoncé avant de commencer : vous validez un montant, pas un compteur qui tourne. Sur les missions longues, on réajuste en cours de route, d'un commun accord. Le premier échange est gratuit et sans engagement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mon entreprise est petite, est-ce que ça vaut le coup ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. J'accompagne les TPE et PME, avec des solutions à la juste mesure de votre activité et de votre budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Revendez-vous du matériel ou des logiciels ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Je suis indépendant de tout fournisseur, je vous conseille dans votre seul intérêt, sans commission sur ce que vous achetez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Travaillez-vous avec des solutions propriétaires ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Je privilégie l'open source pour des solutions simples et pérennes, mais je m'adapte à votre existant et à vos contraintes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Proposez-vous un contrat de maintenance ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pas à ce jour. J'interviens en mission et en support ponctuel, sans contrat récurrent ni abonnement."
+      }
+    }
+  ]
 }
 </script>
 </head>
 <body>
 <div class="page">
-  <div class="container">
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">NMARY</a>
+    <div class="nav-links">
+      <a href="#prestations">Prestations</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+  <main>
 
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-text">
-        <h1 class="hero-title">
-          <span class="hero-line1"><em class="hero-you">Votre</em> <span class="hero-role">consultant IT</span></span>
-          <span class="hero-line2">Système, réseau &amp; cybersécurité</span>
-          <span class="hero-badge">EN SAVOIE</span>
-        </h1>
-        <p class="hero-desc">Consultant IT indépendant, j'accompagne les PME dans le choix, la mise en place et le suivi de leur infrastructure informatique, sur site, en Savoie.</p>
-        <div class="hero-actions">
-          <a class="cta" href="mailto:contact@nmary.net">Parlons-en<svg class="icon cta-arrow"><use href="assets/icons.svg#i-arrow-up-right"/></svg></a>
-          <a class="cta-ghost" href="#prestations">
-            <span class="cta-ghost-inner">Voir les prestations</span>
-          </a>
+    <div class="band presta-hero">
+      <div class="band-inner">
+        <div class="hero">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="hero-line1"><em class="hero-you">Votre</em> <span class="hero-role">consultant IT</span></span>
+              <span class="hero-line2">Système, réseau &amp; cybersécurité</span>
+              <span class="hero-badge">EN SAVOIE</span>
+            </h1>
+            <p class="hero-desc">Consultant IT indépendant, j'accompagne les PME dans le choix, la mise en place et le suivi de leur infrastructure informatique, sur site, en Savoie.</p>
+            <div class="hero-actions">
+              <a class="cta" href="mailto:contact@nmary.net">Parlons-en<svg class="icon cta-arrow"><use href="assets/icons.svg#i-arrow-up-right"/></svg></a>
+              <a class="cta-ghost" href="tel:+33743732193">
+                <span class="cta-ghost-inner"><svg class="icon cta-phone"><use href="assets/icons.svg#i-phone"/></svg>07 43 73 21 93</span>
+              </a>
+            </div>
+            <div class="hero-sub-actions">
+              <a class="hero-jump link-dashed" href="#prestations">Voir les prestations</a>
+            </div>
+          </div>
+          <div class="mark">
+            <svg viewBox="0 0 189 187" aria-label="NMARY">
+              <path class="wm" d="M76.5867 128H58.6667L33.8133 68.6933H33.3867L18.6667 128H2.13333L23.68 41.6H40.7467L66.1333 102.187H66.56L81.6 41.6H98.1333L76.5867 128Z"></path>
+              <path class="wm" d="M75.1333 155L96.68 68.6H119.4L126.547 129.507H126.973L164.52 68.6H188.84L167.293 155H149.693L164.84 93.9867H164.413L128.04 155H113.213L107.24 93.9867H106.813L91.6667 155H75.1333Z"></path>
+            </svg>
+          </div>
         </div>
-      </div>
-      <div class="mark">
-        <svg viewBox="0 0 189 187" aria-label="NMARY">
-          <path class="wm" d="M76.5867 128H58.6667L33.8133 68.6933H33.3867L18.6667 128H2.13333L23.68 41.6H40.7467L66.1333 102.187H66.56L81.6 41.6H98.1333L76.5867 128Z"></path>
-          <path class="wm" d="M75.1333 155L96.68 68.6H119.4L126.547 129.507H126.973L164.52 68.6H188.84L167.293 155H149.693L164.84 93.9867H164.413L128.04 155H113.213L107.24 93.9867H106.813L91.6667 155H75.1333Z"></path>
-        </svg>
       </div>
     </div>
 
-    <!-- PRESTATIONS -->
-    <div id="prestations" class="section">
-      <div class="section-header">
-        <h2 class="section-title"><span class="section-index">01</span>Prestations</h2>
-      </div>
-      <p class="section-intro">Un accompagnement sur mesure, du diagnostic à la mise en œuvre.</p>
-      <div class="grid">
-        <div class="card row">
+    <section class="band band-alt" id="prestations">
+      <div class="band-inner">
+        <div class="sec-head">
+          <span class="sec-pill">Prestations</span>
+          <h2 class="sec-title">Un accompagnement sur mesure, du diagnostic à la mise en œuvre.</h2>
+        </div>
+        <div class="grid">
+        <a class="card row" href="conseil-audit.html">
           <span class="card-num">01</span>
           <h3 class="card-title">
             <svg class="icon card-icon"><use href="assets/icons.svg#i-clipboard-check"/></svg>
             <span>Conseil &amp; Audit</span>
           </h3>
-          <div class="card-desc">Un état des lieux clair de votre informatique : ce qui fonctionne, ce qui mérite attention, et les priorités pour avancer sereinement.</div>
-        </div>
-        <div class="card row">
+          <div class="card-desc">Un état des lieux clair de votre informatique : ce qui fonctionne, ce qui mérite attention, et les priorités pour avancer sereinement.</div>
+          <span class="card-more">La mission en détail<svg class="icon"><use href="assets/icons.svg#i-arrow-up-right"/></svg></span>
+        </a>
+        <a class="card row" href="accompagnement-technique.html">
           <span class="card-num">02</span>
           <h3 class="card-title">
             <svg class="icon card-icon"><use href="assets/icons.svg#i-tool"/></svg>
             <span>Accompagnement technique</span>
           </h3>
           <div class="card-desc">Du choix de la solution à son installation, je m'occupe de tout pour répondre à votre besoin (accès distant, serveur, sécurité…).</div>
-        </div>
-        <div class="card row">
+          <span class="card-more">En savoir plus<svg class="icon"><use href="assets/icons.svg#i-arrow-up-right"/></svg></span>
+        </a>
+        <a class="card row" href="developpement-logiciel.html">
           <span class="card-num">03</span>
           <h3 class="card-title">
             <svg class="icon card-icon"><use href="assets/icons.svg#i-code"/></svg>
             <span>Développement logiciel</span>
           </h3>
-          <div class="card-desc">Un petit développement sur mesure et ponctuel : un outil, un script, un site, l'automatisation d'une tâche répétitive.</div>
-        </div>
-        <div class="card row">
+          <div class="card-desc">Un petit développement sur mesure et ponctuel : un outil, un script, un site, l'automatisation d'une tâche répétitive.</div>
+          <span class="card-more">En savoir plus<svg class="icon"><use href="assets/icons.svg#i-arrow-up-right"/></svg></span>
+        </a>
+        <a class="card row" href="support.html">
           <span class="card-num">04</span>
           <h3 class="card-title">
             <svg class="icon card-icon"><use href="assets/icons.svg#i-lifebuoy"/></svg>
             <span>Support</span>
           </h3>
-          <div class="card-desc">Un problème ? Une aide ponctuelle, quand vous en avez besoin.</div>
+          <div class="card-desc">Un problème ? Une aide ponctuelle, quand vous en avez besoin.</div>
+          <span class="card-more">En savoir plus<svg class="icon"><use href="assets/icons.svg#i-arrow-up-right"/></svg></span>
+        </a>
+        </div>
+        <p class="section-cta">Premier échange gratuit et sans engagement.</p>
+      </div>
+    </section>
+
+    <section class="band" id="parcours">
+      <div class="band-inner">
+        <div class="sec-head">
+          <span class="sec-pill">Mon parcours</span>
+          <h2 class="sec-title">Epitech, Paris, puis la Savoie.</h2>
+        </div>
+        <div class="prose">
+          <p class="parcours-text">Diplômé Epitech en ingénierie système et réseau, spécialisation cybersécurité. Plusieurs années passées sur des infrastructures complexes à Paris, puis retour en Savoie. Je privilégie les solutions <span>open source</span>, simples et pérennes.</p>
         </div>
       </div>
-      <p class="section-cta">Premier échange gratuit et sans engagement.</p>
-    </div>
+    </section>
 
-    <!-- PARCOURS -->
-    <div id="parcours" class="section">
-      <div class="section-header">
-        <h2 class="section-title"><span class="section-index">02</span>Mon parcours</h2>
-      </div>
-      <p class="parcours-text">Diplômé Epitech en ingénierie système et réseau, spécialisation cybersécurité. Plusieurs années passées sur des infrastructures complexes à Paris, puis retour en Savoie. Je privilégie les solutions <span>open source</span>, simples et pérennes.</p>
-    </div>
-
-    <!-- ZONE -->
-    <div id="zone" class="section">
-      <div class="section-header">
-        <h2 class="section-title"><span class="section-index">03</span>Où j'interviens</h2>
-      </div>
-      <div class="card zone-box">
-        <div class="zone-col zone-col-left">
-          <div class="zone-heading"><span>Basé en Savoie, mobile partout</span></div>
-          <p class="zone-desc">Mon point d'ancrage est <strong>Aix-les-Bains</strong>, en Savoie.</p>
+    <section class="band band-alt" id="zone">
+      <div class="band-inner">
+        <div class="sec-head">
+          <span class="sec-pill">Où j'interviens</span>
+          <h2 class="sec-title">Basé en Savoie, mobile partout.</h2>
         </div>
-        <div class="zone-col zone-col-right">
-          <p class="zone-line">Intervention <span class="zone-tag olive"><svg class="icon"><use href="assets/icons.svg#i-map-pin"/></svg>sur site</span> ou <span class="zone-tag orange"><svg class="icon"><use href="assets/icons.svg#i-world"/></svg>à distance</span></p>
-          <p class="zone-note">Bien évidemment, je me déplace même hors de la Savoie si besoin.</p>
+        <div class="card-shell">
+        <div class="card zone-box">
+          <div class="zone-col zone-col-left">
+            <p class="zone-desc">Mon point d'ancrage est <strong>Aix-les-Bains</strong>, en Savoie.</p>
+            <p class="zone-address"><svg class="icon"><use href="assets/icons.svg#i-map-pin"/></svg><span>725 Bd Robert Barrier<br>73100 Aix-les-Bains</span></p>
+          </div>
+          <div class="zone-col zone-col-right">
+            <p class="zone-line">Intervention <span class="zone-tag olive"><svg class="icon"><use href="assets/icons.svg#i-map-pin"/></svg>sur site</span> ou <span class="zone-tag orange"><svg class="icon"><use href="assets/icons.svg#i-world"/></svg>à distance</span></p>
+            <p class="zone-note">Bien évidemment, je me déplace même hors de la Savoie si besoin.</p>
+          </div>
+        </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- FAQ -->
-    <div class="section">
-      <div class="section-header">
-        <h2 class="section-title"><span class="section-index">04</span>Questions fréquentes</h2>
-      </div>
-      <div class="faq-list">
+    <section class="band" id="faq">
+      <div class="band-inner">
+        <div class="sec-head">
+          <span class="sec-pill">Questions fréquentes</span>
+          <h2 class="sec-title">Ce qu'on me demande le plus.</h2>
+        </div>
+        <div class="faq-list">
         <details class="card faq-item">
-          <summary class="faq-question">Comment sont établis les tarifs ?<svg class="icon faq-chevron"><use href="assets/icons.svg#i-chevron-down"/></svg></summary>
-          <div class="faq-answer">Prestation au forfait ou à la journée selon la mission, après un premier échange gratuit et sans engagement.</div>
+          <summary class="faq-question">Comment sont établis les tarifs ?<svg class="icon faq-chevron"><use href="assets/icons.svg#i-chevron-down"/></svg></summary>
+          <div class="faq-answer">Je travaille à la journée, et le nombre de jours est estimé et annoncé avant de commencer : vous validez un montant, pas un compteur qui tourne. Sur les missions longues, on réajuste en cours de route, d'un commun accord. Le premier échange est gratuit et sans engagement.</div>
         </details>
         <details class="card faq-item">
-          <summary class="faq-question">Mon entreprise est petite, est-ce que ça vaut le coup ?<svg class="icon faq-chevron"><use href="assets/icons.svg#i-chevron-down"/></svg></summary>
+          <summary class="faq-question">Mon entreprise est petite, est-ce que ça vaut le coup ?<svg class="icon faq-chevron"><use href="assets/icons.svg#i-chevron-down"/></svg></summary>
           <div class="faq-answer">Oui. J'accompagne les TPE et PME, avec des solutions à la juste mesure de votre activité et de votre budget.</div>
         </details>
         <details class="card faq-item">
-          <summary class="faq-question">Revendez-vous du matériel ou des logiciels ?<svg class="icon faq-chevron"><use href="assets/icons.svg#i-chevron-down"/></svg></summary>
+          <summary class="faq-question">Revendez-vous du matériel ou des logiciels ?<svg class="icon faq-chevron"><use href="assets/icons.svg#i-chevron-down"/></svg></summary>
           <div class="faq-answer">Non. Je suis indépendant de tout fournisseur, je vous conseille dans votre seul intérêt, sans commission sur ce que vous achetez.</div>
         </details>
         <details class="card faq-item">
-          <summary class="faq-question">Travaillez-vous avec des solutions propriétaires ?<svg class="icon faq-chevron"><use href="assets/icons.svg#i-chevron-down"/></svg></summary>
+          <summary class="faq-question">Travaillez-vous avec des solutions propriétaires ?<svg class="icon faq-chevron"><use href="assets/icons.svg#i-chevron-down"/></svg></summary>
           <div class="faq-answer">Je privilégie l'open source pour des solutions simples et pérennes, mais je m'adapte à votre existant et à vos contraintes.</div>
         </details>
-      </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div id="contact" class="contact-wrap">
-      <div class="contact-divider"></div>
-      <a class="contact" href="mailto:contact@nmary.net">
-        <div class="contact-inner">
-          <div class="contact-label">UN BESOIN, UNE QUESTION ?</div>
-          <div class="contact-heading">
-            <svg class="icon mail-icon"><use href="assets/icons.svg#i-mail"/></svg>
-            <span class="contact-title">Parlons-en.</span>
-          </div>
-          <div class="contact-footer">
-            <span class="contact-email">contact@nmary.net</span>
-          </div>
+        <details class="card faq-item">
+          <summary class="faq-question">Proposez-vous un contrat de maintenance ?<svg class="icon faq-chevron"><use href="assets/icons.svg#i-chevron-down"/></svg></summary>
+          <div class="faq-answer">Pas à ce jour. J'interviens en mission et en <a href="support.html">support ponctuel</a>, sans contrat récurrent ni abonnement.</div>
+        </details>
         </div>
-      </a>
-    </div>
+      </div>
+    </section>
 
-    <!-- FOOTER -->
-    <div class="footer">
-      <div class="footer-legal">Nicolas Mary · Entrepreneur Individuel · SIREN 108 324 450</div>
-      <div class="footer-address"><svg class="icon"><use href="assets/icons.svg#i-map-pin"/></svg><span>Cité de l'Entreprise · 725 Bd Robert Barrier · 73100 Aix-les-Bains</span></div>
-      <a class="footer-social" href="https://www.linkedin.com/in/nmary/" target="_blank" rel="noopener" aria-label="Profil LinkedIn de Nicolas Mary">
-        <svg class="icon"><use href="assets/icons.svg#i-brand-linkedin"/></svg><span>LinkedIn</span>
-      </a>
-      <nav class="footer-nav">
-        <a class="footer-link link-dashed" href="mentions-legales.html">Mentions légales</a>
-        <span>·</span>
-        <a class="footer-link link-dashed" href="cgv.html">CGV</a>
-      </nav>
+    <section class="band band-alt" id="contact">
+      <div class="band-inner">
+        <div class="sec-head">
+          <span class="sec-pill">Contact</span>
+          <h2 class="sec-title">Un premier échange, sans engagement.</h2>
+          <p class="sec-lead">Décrivez votre besoin en deux lignes, même approximativement. Je vous dis si je peux aider, et comment.</p>
+        </div>
+        <div class="contact-grid">
+          <a class="card contact-card" href="mailto:contact@nmary.net">
+            <svg class="icon contact-card-icon"><use href="assets/icons.svg#i-mail"/></svg>
+            <span class="contact-card-label">Par email</span>
+            <span class="contact-card-value">contact@nmary.net</span>
+          </a>
+          <a class="card contact-card" href="tel:+33743732193">
+            <svg class="icon contact-card-icon"><use href="assets/icons.svg#i-phone"/></svg>
+            <span class="contact-card-label">Par téléphone</span>
+            <span class="contact-card-value">07 43 73 21 93</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="footer-col-title">Prestations</div>
+          <a href="conseil-audit.html">Conseil &amp; Audit</a>
+          <a href="accompagnement-technique.html">Accompagnement technique</a>
+          <a href="developpement-logiciel.html">Développement logiciel</a>
+          <a href="support.html">Support</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <a href="mailto:contact@nmary.net">contact@nmary.net</a>
+          <a href="tel:+33743732193">07 43 73 21 93</a>
+          <p class="footer-addr">725 Bd Robert Barrier<br>73100 Aix-les-Bains</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Le site</div>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="cgv.html">CGV</a>
+          <a href="https://www.linkedin.com/in/nmary/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
       <div class="footer-bottom">
+        <span>Nicolas Mary · Entrepreneur Individuel · SIREN 108 324 450</span>
         <span>© 2026 <a class="footer-brand" href="https://nmary.net">NMARY.net</a></span>
       </div>
     </div>
-
-  </div>
+  </footer>
 </div>
 </body>
 </html>
