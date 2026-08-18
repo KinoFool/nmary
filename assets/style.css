@@ -93,7 +93,7 @@ a:hover { color: #EA580C; }
 /* ---- Hero ---- */
 .hero-title { margin: 0; letter-spacing: -.03em; }
 .hero-line1 { display: block; font-size: 34px; line-height: 1.08; color: #3A3728; }
-.hero-you { font-style: italic; font-weight: 400; color: #8A8564; }
+.hero-you { font-style: italic; font-weight: 400; color: #EA580C; }
 .hero-role { font-weight: 700; color: #141410; }
 .hero-line2 { display: block; font-size: 24px; font-weight: 500; color: #4A4632; letter-spacing: -.01em; margin-top: .5rem; }
 .hero-badge { display: block; font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 500; letter-spacing: .1em; color: #B8410C; margin-top: .6rem; }
