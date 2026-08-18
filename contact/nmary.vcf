@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Mary;Nicolas;;;
+FN:Nicolas Mary
+ORG:NMARY
+TITLE:Consultant IT
+TEL;TYPE=WORK,VOICE:+33743732193
+EMAIL;TYPE=WORK,INTERNET:contact@nmary.net
+URL:https://www.nmary.net
+ADR;TYPE=WORK:;;725 boulevard Robert Barrier;Aix-les-Bains;Savoie;73100;France
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/nmary/
+REV:2026-08-18T00:00:00Z
+END:VCARD

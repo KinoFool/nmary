@@ -99,7 +99,9 @@ a:hover { color: #EA580C; }
 .hero-badge { display: block; font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 500; letter-spacing: .1em; color: #B8410C; margin-top: .6rem; }
 .hero-desc { font-size: 17px; color: #4A4632; line-height: 1.6; max-width: 440px; margin: 1.1rem 0 0; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 1.4rem; }
-.cta-phone { font-size: 18px; color: #EA580C; }
+/* .cta-ghost-icon : meme reglage, nom neutre. Le bouton fantome ne porte pas toujours un
+   telephone (page contact : un globe), et une classe ne doit pas mentir sur son contenu. */
+.cta-phone, .cta-ghost-icon { font-size: 18px; color: #EA580C; }
 .hero-sub-actions { margin-top: .9rem; }
 .hero-jump { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: .05em; color: #5F5B47; }
 .hero-jump:hover { color: #EA580C; }
@@ -158,7 +160,7 @@ a:hover { color: #EA580C; }
 
 /* ---- Contact ---- */
 .contact-grid { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 660px; margin: 0 auto; }
-.contact-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 1.6rem 1.3rem; color: #141410; transition: background .18s ease, transform .18s ease; }
+.contact-card { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1.6rem 1.3rem; color: #141410; transition: background .18s ease, transform .18s ease; }
 .contact-card:hover { background: rgba(234,88,12,.05); transform: translateY(-2px); }
 .contact-card-icon { font-size: 28px; color: #EA580C; }
 .contact-card:hover .contact-card-icon { animation: wiggle .5s ease; }
@@ -302,4 +304,21 @@ a:hover { color: #EA580C; }
 @media (min-width: 860px) {
   .legal-container { max-width: 840px; }
   .legal-wrap { padding: 4rem 3rem 5rem; }
+}
+
+/* ---- Contact page (contact/index.html) ---- */
+/* Cette page est la destination du QR imprime au verso de la carte de visite : elle arrive
+   presque toujours d'un telephone, et son premier travail est de faire enregistrer la fiche.
+   D'ou les actions centrees sous un .sec-head, la ou un hero les aligne a gauche. */
+.contact-actions { justify-content: center; margin-top: 0; margin-bottom: 1.6rem; }
+/* Seule la carte Adresse porte une deuxieme ligne : le code postal et la ville completent la
+   voie sans meriter le meme corps. Les trois autres cartes n'ont qu'une valeur, la .sub reste
+   donc l'exception et non un element de la grille. */
+.contact-card-sub { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 13px;
+  letter-spacing: .04em; color: #5F5B47; margin-top: .45rem; }
+/* .presta-more passe a trois colonnes a 700px, ce qui laisse une carte seule sur la deuxieme
+   ligne quand il y en a quatre. Ici les quatre prestations sont listees, donc 2x2. */
+.presta-more-4 { max-width: 620px; }
+@media (min-width: 700px) {
+  .presta-more-4 { grid-template-columns: repeat(2, 1fr); }
 }

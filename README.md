@@ -14,6 +14,8 @@ conseil-audit.html              ┐
 accompagnement-technique.html   │ pages prestation, generees
 developpement-logiciel.html     │ (voir tools/)
 support.html                    ┘
+contact/index.html              page contact, cible du QR de la carte de visite
+contact/nmary.vcf               fiche vCard servie par cette page
 mentions-legales.html           pages legales, noindex
 cgv.html
 assets/style.css                toute la mise en forme
@@ -55,6 +57,32 @@ main par erreur.
 Le script n'est pas une étape de build : sa sortie est du HTML statique
 ordinaire, versionné comme le reste. On le relance seulement quand le contenu
 change.
+
+## Page contact
+
+`contact/index.html` est un répertoire et non un `contact.html` à la racine : l'URL
+`https://nmary.net/contact` est ainsi servie par n'importe quel hôte, sans dépendre de la
+résolution sans extension de GitHub Pages. **Cette URL est imprimée dans le QR au verso de la
+carte de visite** (dépôt `../nmary-asset`), donc elle ne doit plus bouger : un QR ne se corrige
+pas après tirage. Si la page devait déménager, laisser une redirection à cet emplacement.
+
+Le lien vers `nmary.vcf` n'a volontairement **pas** d'attribut `download` : sur iOS celui-ci
+envoie le fichier dans Fichiers, alors qu'un lien nu ouvre la fiche contact et propose de
+l'enregistrer. La page arrive presque toujours d'un scan, donc d'un téléphone, et c'est ce
+comportement-là qu'on veut.
+
+Le `.vcf` duplique le téléphone, l'email et l'adresse présents sur la page : les deux doivent
+être modifiés ensemble.
+
+La page est liée depuis le pied de page (« Ajouter à vos contacts »), donc depuis les huit
+pages du site. Ce n'est pas décoratif : sans lien entrant, une page que seul un QR imprimé
+atteint devient invisible depuis le site et se fait supprimer au premier remaniement, sans que
+personne le remarque avant qu'un client scanne une carte morte.
+
+La nav, elle, ne pointe **pas** ici : ses trois entrées sont des ancres de l'accueil, et la
+section `#contact` de l'accueil garde son rôle de conclusion du discours commercial. Cette
+page-ci livre des coordonnées, ce n'est pas le même travail. Son accroche ne suppose donc pas
+qu'on arrive d'un scan.
 
 ## Conventions
 
